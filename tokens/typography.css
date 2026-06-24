@@ -1,0 +1,71 @@
+/* ============================================================
+   Andre Gagnon — Typography tokens
+   One voice: Hanken Grotesk. Display is set BIG and tight; labels
+   are uppercase and tracked (the studio's signature "pill label").
+   Space Mono is a supporting face for technical / index numerals.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-sans:    'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+  --fw-black:     900;
+
+  /* ---- Tracking ---- */
+  --tracking-mega:   -0.045em;
+  --tracking-tight:  -0.03em;
+  --tracking-snug:   -0.015em;
+  --tracking-normal: 0;
+  --tracking-label:  0.10em;
+  --tracking-wide:   0.16em;
+
+  /* ---- Line heights ---- */
+  --lh-solid:   0.92;
+  --lh-tight:   1.02;
+  --lh-snug:    1.14;
+  --lh-normal:  1.42;
+  --lh-relaxed: 1.6;
+
+  /* ---- Raw type scale ---- */
+  --size-hero:    clamp(4rem, 14vw, 12rem);   /* giant wordmark / statement */
+  --size-display: clamp(2.75rem, 7vw, 5.5rem);
+  --size-h1:      clamp(2.25rem, 4.5vw, 3.5rem);
+  --size-h2:      clamp(1.75rem, 3vw, 2.5rem);
+  --size-h3:      1.5rem;
+  --size-h4:      1.25rem;
+  --size-lead:    1.25rem;
+  --size-body:    1rem;
+  --size-sm:      0.875rem;
+  --size-xs:      0.75rem;
+  --size-label:   0.8125rem;  /* uppercase pill label */
+  --size-kicker:  0.6875rem;  /* tiny tracked eyebrow */
+
+  /* ============================================================
+     Semantic type roles
+     ============================================================ */
+  --text-hero-size:     var(--size-hero);
+  --text-hero-weight:   var(--fw-bold);
+  --text-hero-tracking: var(--tracking-mega);
+  --text-hero-lh:       var(--lh-solid);
+
+  --text-display-size:  var(--size-display);
+  --text-display-lh:    var(--lh-tight);
+
+  --text-heading-tracking: var(--tracking-tight);
+  --text-body-size:     var(--size-body);
+  --text-body-lh:       var(--lh-normal);
+  --text-body-weight:   var(--fw-regular);
+
+  --text-label-size:    var(--size-label);
+  --text-label-weight:  var(--fw-semibold);
+  --text-label-tracking:var(--tracking-label);
+}

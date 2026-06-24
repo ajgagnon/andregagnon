@@ -1,0 +1,80 @@
+/* ============================================================
+   Andre Gagnon — Color tokens
+   A confident monochrome system (near-black ink on a cool, pale
+   "paper") lifted by a single muted sage-teal accent.
+   ============================================================ */
+
+:root {
+  /* ---- Base palette ---- */
+  --paper:        #F0F5F8; /* page background — cool, pale, almost-white */
+  --paper-2:      #E6EDF0; /* raised surface / subtle fill */
+  --paper-3:      #D7E0E4; /* secondary button / chip fill */
+  --paper-4:      #C7D2D7; /* hairline-on-light, deeper chip */
+
+  --ink:          #0B1014; /* near-black — primary text, black pill */
+  --ink-2:        #1A2228; /* hover / pressed black */
+  --ink-3:        #3A444B; /* strong secondary text */
+  --ink-muted:    #6C787E; /* muted / meta text */
+  --ink-faint:    #9BA6AB; /* placeholders, "Scroll", disabled */
+
+  --white:        #FFFFFF;
+
+  /* ---- Sage accent (the system's single color) ---- */
+  --sage:         #608784; /* primary accent */
+  --sage-deep:    #3D5A52; /* accent text on light, pressed */
+  --sage-bright:  #79A39A; /* hover / highlight */
+  --sage-soft:    #C3D3CE; /* tint fill */
+  --sage-tint:    #DDE8E4; /* faintest wash */
+
+  /* ---- Functional ---- */
+  --positive:     #3D7A5E;
+  --warning:      #B8762E;
+  --danger:       #B5443A;
+
+  /* ---- Lines & alpha ---- */
+  --line:         rgba(11, 16, 20, 0.10);
+  --line-strong:  rgba(11, 16, 20, 0.18);
+  --line-faint:   rgba(11, 16, 20, 0.06);
+  --ink-a-08:     rgba(11, 16, 20, 0.08);
+  --ink-a-60:     rgba(11, 16, 20, 0.60);
+  --on-ink-a-12:  rgba(240, 245, 248, 0.12);
+  --on-ink-a-60:  rgba(240, 245, 248, 0.60);
+
+  /* ============================================================
+     Semantic aliases — reach for these in components.
+     ============================================================ */
+  --bg:               var(--paper);
+  --surface:          var(--white);
+  --surface-sunken:   var(--paper-2);
+  --surface-chip:     var(--paper-3);
+
+  --text:             var(--ink);
+  --text-strong:      var(--ink);
+  --text-secondary:   var(--ink-3);
+  --text-muted:       var(--ink-muted);
+  --text-faint:       var(--ink-faint);
+  --text-inverse:     var(--paper);
+  --text-accent:      var(--sage-deep);
+
+  --accent:           var(--sage);
+  --accent-strong:    var(--sage-deep);
+  --accent-hover:     var(--sage-bright);
+  --accent-soft:      var(--sage-soft);
+  --accent-wash:      var(--sage-tint);
+
+  --border:           var(--line);
+  --border-strong:    var(--line-strong);
+  --border-faint:     var(--line-faint);
+
+  /* Buttons */
+  --btn-primary-bg:        var(--ink);
+  --btn-primary-bg-hover:  var(--ink-2);
+  --btn-primary-fg:        var(--paper);
+  --btn-secondary-bg:      var(--paper-3);
+  --btn-secondary-bg-hover:var(--paper-4);
+  --btn-secondary-fg:      var(--ink);
+  --btn-accent-bg:         var(--sage);
+  --btn-accent-fg:         var(--white);
+
+  --focus-ring:       var(--sage-deep);
+}
