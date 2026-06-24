@@ -27,6 +27,11 @@ a { color: inherit; text-decoration: none; }
   max-width: var(--container-max);
   margin: 0 auto;
 }
+.content-wrap {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-inline: var(--page-margin);
+}
 
 /* Shared mono eyebrow ("kicker") */
 .kicker {
@@ -291,7 +296,6 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
   gap: 16px;
   margin-bottom: var(--space-10);
-  padding: 0 var(--page-margin);
 }
 .work__title {
   margin: 0;
@@ -306,17 +310,33 @@ a { color: inherit; text-decoration: none; }
 }
 
 .work-row {
+  position: relative;
+  display: block;
+  border-top: 1px solid var(--border-strong);
+  padding-block: var(--space-8);
+  transition: background var(--dur-base) var(--ease-out);
+}
+.work-row__link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.work-row__link:focus-visible {
+  outline: 2px solid var(--sage-deep);
+  outline-offset: -2px;
+}
+.work-row__inner {
+  position: relative;
   display: grid;
   grid-template-columns: 64px 1fr auto;
   gap: var(--space-6);
   align-items: start;
-  padding: var(--space-8) var(--page-margin);
-  border-top: 1px solid var(--border-strong);
-  transition: padding-left var(--dur-base) var(--ease-out),
-              background var(--dur-base) var(--ease-out);
+  transition: padding-left var(--dur-base) var(--ease-out);
 }
 .work-row:hover {
   background: var(--ink);
+}
+.work-row:hover .work-row__inner {
   padding-left: calc(var(--page-margin) + 12px);
 }
 .work-row__index,
